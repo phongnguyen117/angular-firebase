@@ -1,0 +1,14 @@
+<div class="welcome">
+  <h3 class="text-center">Your Profile</h3>
+</div>
+<div class="bodyAuth">
+  <div class="auth text-center" ng-show="authService.user">
+    <p>Hello, {{authService.user.facebook.displayName}}</p><br>
+    <img class="img-thumbnail" ng-src="{{authService.user.facebook.profileImageURL}}"><br>
+    <button class="buttonRight btn btn-primary btn-lg active" ng-click="logout()">Logout</button>
+  </div>
+  <div class="auth text-center" ng-hide="authService.user">
+    <p>Welcome, please log in.</p>
+    <button class="buttonRight btn btn-primary btn-lg active" ng-click="login()">Login</button>
+  </div>
+</div>

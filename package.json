@@ -1,0 +1,11 @@
+{
+  "name": "angularjs-firebase",
+  "version": "1.0.0",
+  "description": "angular1.x - firebae",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "phongnguyen",
+  "license": "ISC"
+}

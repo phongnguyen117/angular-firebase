@@ -1,0 +1,25 @@
+<div class="welcome bg-primary">
+  <h3 class="text-center">LIST ROOMS</h3>
+</div>
+<div class="bodyRoom2">
+  <div class="chatRoom" ng-show="authService.user">
+    CHAT ROOMS:<a class="btn btn-primary btn-sm" href="" ng-hide="isNew" ng-click="isNew=true">New Room</a>
+    <input class="form-control" type="text" ng-show="isNew" ng-model="roomName" placeholder="Room name"/>
+    <a class="btn btn-success" href="" ng-disabled="!roomName" ng-show="isNew" ng-click="newRoom()">Create Room</a>
+    <a class="btn btn-success" href="" ng-show="isNew" ng-click="isNew=false">Cancel</a>
+  </div>
+  <div class="content">
+    <h2>LIST ROOMS:</h2>
+    <div>
+      <input class="form-control" ng-model="query" placeholder="Search room">   
+    </div>
+    <ul>
+      <li ng-repeat="item in rooms | filter:query">
+        <span class="roomName">{{item.roomName}}</span>: created by {{item.createdBy}}
+        <br> 
+        <a class="btn btn-info" ng-show="authService.user" ng-click="joinChat($index)"> joinChat</a>
+        <a class="btn btn-info" href="" ng-show="authService.user.facebook.displayName===item.createdBy" ng-click="deleteRoom($index)">Delete</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Chat Forum</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body>
+
+<!--   <div class="col-md-9 col-md-push-3 bodyContent">
+    <div ng-view></div>
+  </div> -->
+  <!-- <div class="bodyRight" ng-include src="'partials/auth.html'"></div> -->
+  <div class="col-md-9 col-md-push-3 bodyContent">
+    <div ui-view="content"></div>
+  </div>
+
+  <div class="bodyRight" ui-view></div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

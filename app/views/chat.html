@@ -1,0 +1,28 @@
+<div class="welcome bg-primary">
+  <h3 class="text-center">Welcome to {{roomInfo.roomName}}</h3>
+</div>
+<div class="bodyRoom">
+  <ul class="contentChat" scroll-down>
+    <li ng-repeat="detail in chatMessages">
+      <div class"messageBody">
+        <div class="imgUser"><img ng-src="{{detail.userImg}}" width="50"; height="60"></div>
+        <div class="messageUser">
+          <span class="nameUser">{{detail.postedBy}}</span>
+          <span class="dateMessage">{{detail.postedDate|date:'yyyy-MM-dd HH:mm:ss'}}</span>
+          <br>
+          <span class="contentMessage">{{detail.message}}</span>
+          <div ng-show="detail.url" class="text-center">
+            <youtube model="detail.url"></youtube>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="formChat" ng-show="authService.user">
+  <form ng-submit="sendMessage()">
+    <input class="form-control inputChat btn-lg" rows="3" type="text" placeholder="Enter message" ng-model="message">
+    <input class="btn btn-primary btn-lg" type="submit" value="Send">
+  </form>
+</div>
