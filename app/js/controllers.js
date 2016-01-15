@@ -67,7 +67,7 @@
     };
   }]);
 
-  controllers.controller('HomeCtrl', ['$scope', '$rootScope', 'authService', '$firebaseArray', '$firebaseObject', '$state', 
+  controllers.controller('HomeCtrl', ['$scope', '$rootScope', 'authService', '$firebaseArray', '$firebaseObject', '$state',
     function($scope, $rootScope, authService, $firebaseArray, $firebaseObject, $state) {
 
     $scope.authService = authService;
@@ -97,7 +97,7 @@
     };
   }]);
 
-  controllers.controller('ChatCtrl',['$scope', '$rootScope', 'authService', '$stateParams', '$firebaseObject', '$firebaseArray', 
+  controllers.controller('ChatCtrl',['$scope', '$rootScope', 'authService', '$stateParams', '$firebaseObject', '$firebaseArray',
     function($scope, $rootScope, authService, $stateParams, $firebaseObject, $firebaseArray){
 
       var chatRoom = new Firebase('https://glaring-heat-5049.firebaseio.com/chatrooms/' + $stateParams.roomId);
@@ -110,7 +110,7 @@
       $scope.sendMessage=function() {
         $scope.url = null;
         if($scope.message.indexOf('https://www.youtube.com/watch?v=')==-1) {
-          console.log('aaa');
+          console.log('has youtube');
         } else {
           var number = $scope.message.indexOf('https://www.youtube.com/watch?v=');
           var start=number+32, end= number+43;

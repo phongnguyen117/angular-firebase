@@ -24,7 +24,7 @@
       }
   });
 
-  chatDirectives.directive('scrollDown',['$document',function($document) {
+  chatDirectives.directive('scrollDown',['$document', function($document) {
     return {
       restrict: 'A',
       replace: 'true',
