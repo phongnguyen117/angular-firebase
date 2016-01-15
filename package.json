@@ -1,10 +1,10 @@
 {
   "name": "angularjs-firebase",
   "version": "1.0.0",
-  "description": "angular1.x - firebae",
+  "description": "angular1.x - firebase",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "bower install",
      "start": "node index.js"
   },
   "author": "phongnguyen",
