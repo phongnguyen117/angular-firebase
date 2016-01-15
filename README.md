@@ -1,5 +1,7 @@
 # angular-firebase
 
-First run: bower install
+First run: 
+  + npm install
+  + bower install
 
-Server run: python -m SimpleHTTPServer 3000
+Server run: node index.js
